@@ -211,3 +211,18 @@ compile_commands.json
 
 # Ignore GHA NodeJS files
 .github/**/node_modules/
+
+*.a
+*.so*
+src/*.a
+src/*.so*
+src/CMakeCache.txt
+src/CMakeFiles
+src/Makefile
+src/cmake
+src/cmake_install.cmake
+src/install_manifest.txt
+src/lib/
+src/options-pinned.h
+src/protoc*
+src/third_party
