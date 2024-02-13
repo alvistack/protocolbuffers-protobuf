@@ -31,6 +31,10 @@ from setuptools.command.build_py import build_py as _build_py
 # Find the Protocol Compiler.
 if 'PROTOC' in os.environ and os.path.exists(os.environ['PROTOC']):
   protoc = os.environ['PROTOC']
+elif os.path.exists('../src/protoc'):
+  protoc = '../src/protoc'
+elif os.path.exists('../src/protoc.exe'):
+  protoc = '../src/protoc.exe'
 elif os.path.exists('../bazel-bin/protoc'):
   protoc = '../bazel-bin/protoc'
 elif os.path.exists('../bazel-bin/protoc.exe'):
