@@ -1,0 +1,5 @@
+usr/include
+usr/lib/*/cmake/*/*.cmake
+usr/lib/*/libprotobuf-lite.so
+usr/lib/*/libprotobuf.so
+usr/lib/*/pkgconfig/*

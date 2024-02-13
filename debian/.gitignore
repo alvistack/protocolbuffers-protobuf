@@ -1,0 +1,13 @@
+*.substvars
+*debhelper*
+.debhelper
+autoreconf.*
+files
+libprotobuf-dev
+libprotobuf-lite32
+libprotobuf32
+libprotoc-dev
+libprotoc32
+protobuf-compiler
+python3-protobuf
+tmp

@@ -1,0 +1,60 @@
+#!/usr/bin/make -f
+
+SHELL := /bin/bash
+
+override_dh_autoreconf:
+
+override_dh_auto_configure:
+	pushd src && \
+		cmake \
+			../cmake \
+			-DCMAKE_BUILD_TYPE=Release \
+			-DCMAKE_INSTALL_PREFIX=/usr \
+			-Dprotobuf_BUILD_LIBPROTOC=ON \
+			-Dprotobuf_BUILD_PROTOC_BINARIES=ON \
+			-Dprotobuf_BUILD_SHARED_LIBS=ON \
+			-Dprotobuf_BUILD_TESTS=OFF && \
+	popd
+
+override_dh_auto_build:
+	pushd src && \
+		cmake \
+			--build . \
+			--parallel 10 \
+			--config Release && \
+	popd
+	mkdir -p src/.libs
+	pushd src/.libs && \
+		ln -fs ../*.so* . && \
+	popd
+	pushd python && \
+		python3 setup.py build \
+			--cpp_implementation && \
+	popd
+
+override_dh_auto_install:
+	pushd src && \
+		export DESTDIR=../debian/tmp && \
+		cmake \
+			--install . && \
+	popd
+	pushd python && \
+		python3 setup.py install \
+			--cpp_implementation \
+			--no-compile \
+			--install-layout=deb \
+		 	--root=../debian/tmp && \
+	popd
+	find debian/tmp/usr/lib/python*/*-packages -type f -name '*.pyc' -exec rm -rf {} \;
+	fdupes -qnrps debian/tmp/usr/lib/python*/*-packages
+
+override_dh_install:
+	dh_install
+	rm -rf debian/libprotobuf-dev/usr/include/google/protobuf/compiler
+
+override_dh_auto_test:
+
+override_dh_auto_clean:
+
+%:
+	dh $@

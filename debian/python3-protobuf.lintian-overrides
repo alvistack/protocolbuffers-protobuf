@@ -1,0 +1,4 @@
+python3-protobuf: copyright-without-copyright-notice
+python3-protobuf: initial-upload-closes-no-bugs
+python3-protobuf: shared-library-lacks-prerequisites
+python3-protobuf: zero-byte-file-in-doc-directory
