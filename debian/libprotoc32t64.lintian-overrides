@@ -1,0 +1,4 @@
+libprotoc32t64: copyright-without-copyright-notice
+libprotoc32t64: initial-upload-closes-no-bugs
+libprotoc32t64: package-name-doesnt-match-sonames
+libprotoc32t64: zero-byte-file-in-doc-directory
