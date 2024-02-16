@@ -1,0 +1,4 @@
+protobuf-compiler: copyright-without-copyright-notice
+protobuf-compiler: initial-upload-closes-no-bugs
+protobuf-compiler: no-manual-page
+protobuf-compiler: zero-byte-file-in-doc-directory

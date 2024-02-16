@@ -1,0 +1,7 @@
+protobuf source: configure-generated-file-in-source
+protobuf source: dependency-is-not-multi-archified
+protobuf source: file-without-copyright-information
+protobuf source: no-debian-changes
+protobuf source: not-binnmuable-any-depends-any
+protobuf source: python3-depends-but-no-python3-helper
+protobuf source: weak-library-dev-dependency
