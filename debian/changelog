@@ -1,0 +1,5 @@
+protobuf (100:4.25.3-1) UNRELEASED; urgency=medium
+
+  * https://github.com/protocolbuffers/protobuf/releases/tag/v4.25.3
+
+ -- Wong Hoi Sing Edison <hswong3i@pantarei-design.com>  Fri, 16 Feb 2024 23:19:27 +0800
