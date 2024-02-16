@@ -1,0 +1,4 @@
+libprotobuf32t64: copyright-without-copyright-notice
+libprotobuf32t64: initial-upload-closes-no-bugs
+libprotobuf32t64: package-name-doesnt-match-sonames
+libprotobuf32t64: zero-byte-file-in-doc-directory
