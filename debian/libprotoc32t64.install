@@ -1,0 +1,3 @@
+usr/lib/*/libprotoc*.so.*
+usr/lib/*/libutf8_range.so
+usr/lib/*/libutf8_validity.so
